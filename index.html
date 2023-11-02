@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/heroicons-css@0.1.1/heroicons.min.css">
+  <title>David Todo App</title>
+
+  <style>
+    .todo-icons {
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .todo:hover .todo-icons {
+      opacity: 1;
+    }
+  </style>
+  
+</head>
+<body class="bg-gray-100">
+
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl font-semibold mb-4 text-center">Todoist</h1>
+
+    <div class="flex mb-4">
+      <input type="text" id="todoInput" class="flex-grow p-2 border rounded-l-md focus:outline-none">
+      <button onclick="addTodo()" id="addBtn" class="bg-blue-500 text-white p-2 rounded-r-md ml-2">Add Todo</button>
+      <button onclick="updateTodo()" id="updateBtn" class="hidden bg-green-500 text-white p-2 rounded-r-md ml-2">Update Todo</button>
+    </div>
+
+    <ul id="todoList" class="space-y-2">
+      <!-- Todo items will be dynamically added here -->
+    </ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.all.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
